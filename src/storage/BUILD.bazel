@@ -1,0 +1,38 @@
+load("@npm_bazel_typescript//:index.bzl", "ts_library")
+
+package(default_visibility = ["//src:__subpackages__"])
+
+ts_library(
+    name = "shared",
+    srcs = [
+        "shared.ts",
+    ],
+    tsconfig = "//:tsconfig.json",
+    deps = [
+        "//src/objects:Evaluation",
+        "//src/objects:EvaluationEvent",
+        "//src/objects:GoalEvent",
+        "//src/objects:MetricsEvent",
+        "//src/objects:User",
+        "@npm//@types/node",
+        "@npm//option-t",
+    ],
+)
+
+ts_library(
+    name = "storage",
+    srcs = [
+        "storage.ts",
+    ],
+    tsconfig = "//:tsconfig.json",
+    deps = [
+        ":shared",
+        "//src/objects:Evaluation",
+        "//src/objects:EvaluationEvent",
+        "//src/objects:GoalEvent",
+        "//src/objects:MetricsEvent",
+        "//src/objects:User",
+        "@npm//@types/node",
+        "@npm//option-t",
+    ],
+)

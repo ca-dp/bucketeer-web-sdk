@@ -1,0 +1,15 @@
+{
+  "private": true,
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@bucketeer/sdk": "latest",
+    "express": "4.16.3",
+    "option-t": "17.1.0"
+  },
+  "devDependencies": {
+    "@types/express": "4.11.1",
+    "typescript": "2.8.3",
+    "webpack": "4.43.0",
+    "webpack-cli": "3.3.10"
+  }
+}

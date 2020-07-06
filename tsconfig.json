@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "ES5",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "lib": ["ES5", "ES2015.Promise", "ES2015.Collection", "ES2015.Iterable", "DOM"],
+    "pretty": true,
+    "strict": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": true,
+    "noUnusedParameters": true,
+    "allowSyntheticDefaultImports": true,
+    "preserveConstEnums": true,
+    "outDir": "./__lib/",
+    "types": ["node"]
+  },
+  "bazelOptions": {
+    "suppressTsconfigOverrideWarnings": true
+  },
+  "include": ["./**/*"],
+  "exclude": ["./**/__tests__/*", "./bazel-*/**/*"]
+}

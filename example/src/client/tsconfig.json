@@ -1,0 +1,7 @@
+{
+  "extends": "../../tsconfig",
+  "compilerOptions": {
+    "lib": ["ES2017", "DOM"],
+    "outDir": "../../__build/client"
+  }
+}

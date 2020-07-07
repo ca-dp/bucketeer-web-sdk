@@ -1,5 +1,5 @@
 workspace(
-    name = "bucketeer",
+    name = "bucketeer_web_sdk",
     managed_directories = {
         "@npm": ["node_modules"],
     },

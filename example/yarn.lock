@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@bucketeer/sdk@latest":
-  version "0.0.1-test.2"
-  resolved "https://registry.yarnpkg.com/@bucketeer/sdk/-/sdk-0.0.1-test.2.tgz#4ad38c3583b7ac5425d1962c4c47e78ffb61df59"
-  integrity sha512-SERyhCELDtc40c/LtpXM5Lcen3ZHXJYACbZtsqaYOcWaVDDwW/48tdyDzOwjVecGZ4dObK40g2SuI1vTiX3bJQ==
+"@bucketeer/sdk@1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@bucketeer/sdk/-/sdk-1.0.0.tgz#eb0d0d2d22a58e9152a7e2d716e99fc5b9eb733f"
+  integrity sha512-qTofDbJ22rjB55wQ/q6fJKDtsjGemqUvK+Gacd+aVkUwMuBaWrHjs44vX1R0sJSTGqngchPpdhwAkkta9wCHpw==
   dependencies:
     option-t "^22.3.2"
     uuid "^8.1.0"

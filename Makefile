@@ -72,7 +72,6 @@ publish_dry: copy_genfiles
 publish: copy_genfiles
 ifeq ($(shell $(NPM_BIN_DIR)/semver -r ">$(CURRENT_VERSION)" $(LOCAL_VERSION) ),$(LOCAL_VERSION))
 	npm publish --unsafe-perm
-	$(NPM_BIN_DIR)/release-it --no-increment --ci
 else
 	@echo "$(LOCAL_VERSION) exists. skip publish."
 endif

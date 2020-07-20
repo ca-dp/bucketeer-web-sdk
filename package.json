@@ -36,7 +36,7 @@
     "prettier": "2.0.5",
     "rename-cli": "6.2.1",
     "replace": "1.1.5",
-    "rollup": "2.10.9",
+    "rollup": "2.22.1",
     "rollup-plugin-alias": "2.2.0",
     "rollup-plugin-commonjs": "10.1.0",
     "rollup-plugin-node-resolve": "5.2.0",

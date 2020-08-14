@@ -17,7 +17,7 @@ tools
 .eslintignore
 .eslintrc.js
 .gitignore
-.node-version
+.nvmrc
 .npmignore
 .prettierignore
 .prettierrc.js

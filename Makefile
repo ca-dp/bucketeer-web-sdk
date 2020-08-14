@@ -30,10 +30,6 @@ clean:
 build:
 	bazelisk ${BZLFLAGS} build ${BUILD_FLAGS} --workspace_status_command="echo GIT_REVISION ${GIT_REVISION}" //...
 
-.PHONY: lint
-lint:
-	$(NPM_BIN_DIR)/eslint '$(CURDIR)/src/**/*.ts'
-
 .PHONY: test
 test:
 	rm -rf $(CURDIR)/__test
@@ -53,6 +49,10 @@ fmt: tsfmt ## Run all formatters
 .PHONY: tsfmt
 tsfmt:
 	$(NPM_BIN_DIR)/prettier --write '$(CURDIR)/src/**/*.ts'
+
+.PHONY: lint
+lint:
+	$(NPM_BIN_DIR)/eslint '$(CURDIR)/src/**/*.ts'
 
 .PHONY: copy_genfiles
 copy_genfiles:

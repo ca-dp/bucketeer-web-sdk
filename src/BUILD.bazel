@@ -9,6 +9,8 @@ ts_library(
     srcs = [
         "index.ts",
     ],
+    devmode_module = "commonjs",
+    runtime = "nodejs",
     tsconfig = "//:tsconfig.json",
     visibility = ["//visibility:private"],
     deps = [

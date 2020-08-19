@@ -16,6 +16,7 @@ function createFixture(): PlainResponse {
           featureId: 'featureId',
           featureVersion: 0,
           userId: 'userId',
+          user: { id: 'id', data: {} },
           variationId: 'variationId',
           variation: {
             id: 'id',

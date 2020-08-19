@@ -1,9 +1,11 @@
 import { Reason, ReasonAsPlainObject } from './Reason';
+import { User, UserAsPlainObject } from './User';
 
 export type EvaluationEventAsPlainObject = {
   featureId: string;
   featureVersion: number;
   userId: string;
+  user: UserAsPlainObject;
   variationId: string;
   reason: ReasonAsPlainObject;
   timestamp: number;
@@ -21,6 +23,10 @@ export class EvaluationEvent {
 
   get userId(): string {
     return this._plainObj.userId;
+  }
+
+  get user(): User {
+    return new User(this._plainObj.user);
   }
 
   get variationId(): string {

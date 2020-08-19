@@ -8,6 +8,7 @@ test('Evaluation: convertRawToEvaluation is ok', (t) => {
     featureId: 'featureId',
     featureVersion: 0,
     userId: 'userId',
+    user: { id: 'id', data: {} },
     variationId: 'variationId',
     variation: {
       id: 'id',

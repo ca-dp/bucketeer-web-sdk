@@ -2,12 +2,14 @@ import { isNotNullAndUndefined } from 'option-t/lib/Maybe/Maybe';
 import { createOk, createErr, Result } from 'option-t/lib/PlainResult/Result';
 import { existsRequiredVariationProps, Variation, VariationAsPlainObject } from './Variation';
 import { Reason, ReasonAsPlainObject } from './Reason';
+import { User, UserAsPlainObject } from './User';
 
 const requiredProps: Array<keyof EvaluationAsPlainObject> = [
   'id',
   'featureId',
   'featureVersion',
   'userId',
+  'user',
   'variationId',
   'variation',
 ];
@@ -28,6 +30,7 @@ export type EvaluationAsPlainObject = {
   featureId: string;
   featureVersion: number;
   userId: string;
+  user: UserAsPlainObject;
   variationId: string;
   variation: VariationAsPlainObject;
   reason: ReasonAsPlainObject;
@@ -48,6 +51,10 @@ export class Evaluation {
 
   get userId(): string {
     return this._plainObj.userId;
+  }
+
+  get user(): User {
+    return new User(this._plainObj.user);
   }
 
   get variationId(): string {

@@ -59,7 +59,7 @@ test('getEvaluations', async (t) => {
   t.true(res.ok);
   t.is(unwrapMaybe(res.val).state, GetEvaluationsState.FULL);
   t.true(unwrapMaybe(res.val).evaluations.length >= 1);
-  t.true(unwrapMaybe(res.val).userEvaluationsId !== '')
+  t.true(unwrapMaybe(res.val).userEvaluationsId !== '');
 });
 
 test('registerEvents', async (t) => {
@@ -69,6 +69,7 @@ test('registerEvents', async (t) => {
       featureId: FEATURE_FLAG_ID_1,
       featureVersion: 0,
       userId: USER_ID_1,
+      user: { id: USER_ID_1, data: {} },
       variationId: 'variationId',
       reason: {
         type: ReasonType.CLIENT,

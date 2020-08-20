@@ -208,7 +208,6 @@ export function initialize(config: Config): Bucketeer {
             featureId,
             featureVersion: 0,
             userId: user.id,
-            user: user,
             variationId: '',
             variation: {
               id: '',
@@ -224,8 +223,8 @@ export function initialize(config: Config): Bucketeer {
       const evaluationEvent = new EvaluationEvent({
         featureId: evaluation.featureId,
         featureVersion: evaluation.featureVersion,
-        userId: evaluation.userId,
-        user: evaluation.user,
+        userId: user.id,
+        user,
         variationId: evaluation.variationId,
         reason: { type: ReasonType.CLIENT },
         timestamp,

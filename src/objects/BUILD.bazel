@@ -10,7 +10,6 @@ ts_library(
     tsconfig = "//:tsconfig.json",
     deps = [
         ":Reason",
-        ":User",
         ":Variation",
         "@npm//@types/node",
         "@npm//option-t",

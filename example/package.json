@@ -7,7 +7,7 @@
     "option-t": "23.0.2"
   },
   "devDependencies": {
-    "@types/express": "4.17.7",
+    "@types/express": "4.17.9",
     "typescript": "3.9.7",
     "webpack": "4.44.2",
     "webpack-cli": "3.3.10"

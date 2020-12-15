@@ -7,7 +7,7 @@
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "dependencies": {
-    "option-t": "^23.0.0",
+    "option-t": "^24.0.0",
     "uuid": "^8.1.0"
   },
   "peerDependencies": {

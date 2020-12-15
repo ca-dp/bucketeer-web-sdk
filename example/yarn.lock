@@ -2116,7 +2116,12 @@ once@^1.3.0, once@^1.3.1, once@^1.4.0:
   dependencies:
     wrappy "1"
 
-option-t@23.0.2, option-t@^23.0.0:
+option-t@24.1.0:
+  version "24.1.0"
+  resolved "https://registry.yarnpkg.com/option-t/-/option-t-24.1.0.tgz#fe9ab2f3c41880a922c635340c4b6aac72097161"
+  integrity sha512-m0K7PSZdlL1hTLEuZ7DuV/f3q20GTJ0QYZJqaRBT2YWIdm+0iknJHEgsVwjE+yS1c5uX4+SdEggBBuq5MY6cXQ==
+
+option-t@^23.0.0:
   version "23.0.2"
   resolved "https://registry.yarnpkg.com/option-t/-/option-t-23.0.2.tgz#ca8aa33be58f020d9997b80cb00d91b2c6c05033"
   integrity sha512-t9YtK1IwW094HS9X9sk6eDl5BF3deJk10HOtFdGhjsFmU3TcAcN7MiFZCcIuIyrluYkETPGlm4gXtjikbbG7oQ==

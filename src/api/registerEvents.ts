@@ -1,6 +1,6 @@
-import { createOk, createErr, Result } from 'option-t/lib/PlainResult/Result';
+import { Result } from 'option-t/lib/PlainResult/Result';
 import { Maybe } from 'option-t/lib/Maybe/Maybe';
-import * as uuid from 'uuid';
+import { v4 } from 'uuid';
 import { EvaluationEvent, EvaluationEventAsPlainObject } from '../objects/EvaluationEvent';
 import { GoalEvent, GoalEventAsPlainObject } from '../objects/GoalEvent';
 import { MetricsEvent, MetricsEventAsPlainObject } from '../objects/MetricsEvent';
@@ -40,7 +40,7 @@ export const createRegisterEventsAPI = (
     return api(`${host}/register_events`, token, {
       events: events.map((event) => {
         return {
-          id: uuid.v4(),
+          id: v4(),
           event: event.toPlainObject(),
         };
       }),

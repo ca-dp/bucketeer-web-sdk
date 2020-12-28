@@ -1137,10 +1137,10 @@
   resolved "https://registry.yarnpkg.com/@bazel/hide-bazel-files/-/hide-bazel-files-1.7.0.tgz#7cb140c23c4269d6464c24be0a2acf0241d2a31d"
   integrity sha512-pvdyRX/EsU8n+oElFb+OZ9i5M48HNFR+Z4D3vc0qDGiJ8oly9fZcUb2gbw4CzyeovJz0IzjSxjqMS6cp5gKoeg==
 
-"@bazel/rollup@1.7.0":
-  version "1.7.0"
-  resolved "https://registry.yarnpkg.com/@bazel/rollup/-/rollup-1.7.0.tgz#5c0f0d51d2f3f14e78781a4b9e6a9ffba87f1579"
-  integrity sha512-Pp5aCJw3gwu77zn6/fQgZ39ArrWEI5O3dja5wKadBnfOQ66PImIEr+bf7JgROoWvACH1kGxaS423rq51fiuCsA==
+"@bazel/rollup@3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@bazel/rollup/-/rollup-3.0.0.tgz#6e424966d5ec41f6fcdbfbe25ec88d714f081b06"
+  integrity sha512-IEq+zbbzWC1hRsdCD/9UocznDJ5aNXlg+XcChM3+VJaloBCKoqAiGf337T6AkPZs3HuAlEHYMvqsRyEHxEQmtg==
 
 "@bazel/terser@1.7.0":
   version "1.7.0"

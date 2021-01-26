@@ -1,5 +1,4 @@
 # Bucketeer SDK for Web Client-Side
-test2
 
 ## Setup
 

@@ -19,7 +19,7 @@ export CURRENT_VERSION := $(shell npm view $(PACKAGE_NAME) version 2>/dev/null |
 export LOCAL_VERSION := $(shell node -p "require('./package.json').version")
 
 .PHONY: init
-init: ## Install dependencies.
+init: ## Install dependencies
 	yarn
 
 .PHONY: clean

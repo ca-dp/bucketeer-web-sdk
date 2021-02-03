@@ -2,7 +2,7 @@
   "private": true,
   "license": "Apache-2.0",
   "dependencies": {
-    "@bucketeer/sdk": "1.26.1",
+    "@bucketeer/sdk": "1.26.2",
     "express": "4.17.1",
     "option-t": "23.0.2"
   },

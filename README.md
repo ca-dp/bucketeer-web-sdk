@@ -1,4 +1,4 @@
-# Bucketeer Client SDK for Web
+# Bucketeer Client-side SDK for Web
 
 ## Setup
 

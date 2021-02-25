@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@bucketeer/sdk@1.26.1":
-  version "1.26.1"
-  resolved "https://registry.yarnpkg.com/@bucketeer/sdk/-/sdk-1.26.1.tgz#9cc0991d6f5cfd7479624d0806c402f83a1fd8a3"
-  integrity sha512-6NBgM64iaaymJ1L3TNhdd5z52P07YWV5vBFPN4yYeBcDTQqSxMcO2Mm/H8x2MVmg84i1B6OYfIJsRBQGir6DnQ==
+"@bucketeer/sdk@1.26.3":
+  version "1.26.3"
+  resolved "https://registry.yarnpkg.com/@bucketeer/sdk/-/sdk-1.26.3.tgz#615d857974e876aac97e70ba807652e63e6c51db"
+  integrity sha512-8vv1Gs+r2zPv6pGj/ZG9rh2xIV4MJ5UnpWv8brF+4atuubuQZux/54aOQXUHU4/zgfGX/NMUWXvxlH/NgMWE4w==
   dependencies:
     option-t "^23.0.0"
     uuid "^8.1.0"
@@ -2929,10 +2929,10 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
-typescript@3.9.7:
-  version "3.9.7"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.9.7.tgz#98d600a5ebdc38f40cb277522f12dc800e9e25fa"
-  integrity sha512-BLbiRkiBzAwsjut4x/dsibSTB6yWpwT5qWmC2OfuCg3GgVQCSgMs4vEctYPhsaGtd0AeuuHMkjZ2h2WG8MSzRw==
+typescript@3.9.9:
+  version "3.9.9"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.9.9.tgz#e69905c54bc0681d0518bd4d587cc6f2d0b1a674"
+  integrity sha512-kdMjTiekY+z/ubJCATUPlRDl39vXYiMV9iyeMuEuXZh2we6zz80uovNN2WlAxmmdE/Z/YQe+EbOEXB5RHEED3w==
 
 union-value@^1.0.0:
   version "1.0.1"

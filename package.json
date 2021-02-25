@@ -43,7 +43,7 @@
     "rollup-plugin-replace": "2.2.0",
     "semver": "7.3.2",
     "terser": "4.8.0",
-    "typescript": "3.9.7",
+    "typescript": "3.9.9",
     "uglify-es": "3.3.9"
   }
 }

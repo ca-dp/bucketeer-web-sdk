@@ -85,8 +85,8 @@ make start
 
 ## SDK User Docs
 
-- [Tutorial](https://bucketeer.io/docs/#/sdk-tutorial-web)
-- [Integration](https://bucketeer.io/docs/#/sdk-reference-guides-web)
+- [Tutorial](https://bucketeer.io/docs/#/./client-side-sdk-tutorial-web)
+- [Integration](https://bucketeer.io/docs/#/./client-side-sdk-reference-guides-web)
 
 ## Samples 
 

@@ -83,11 +83,13 @@ Start example server.
 make start
 ```
 
+If you want to use published SDK instead of local one, see `NOTE:` in [the example code](./example/src/client/index.ts)
+
 ## SDK User Docs
 
 - [Tutorial](https://bucketeer.io/docs/#/./client-side-sdk-tutorial-web)
 - [Integration](https://bucketeer.io/docs/#/./client-side-sdk-reference-guides-web)
 
-## Samples 
+## Samples
 
 [Bucketeer Samples](https://github.com/ca-dp/bucketeer-samples)

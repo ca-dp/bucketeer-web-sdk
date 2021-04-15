@@ -85,6 +85,10 @@ make start
 
 If you want to use published SDK instead of local one, see `NOTE:` in [the example code](./example/src/client/index.ts)
 
+## Contributing
+
+[CONTRIBUTING.md](./CONTRIBUTING.md)
+
 ## SDK User Docs
 
 - [Tutorial](https://bucketeer.io/docs/#/./client-side-sdk-tutorial-web)

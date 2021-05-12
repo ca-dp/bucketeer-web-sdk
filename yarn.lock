@@ -4833,10 +4833,10 @@ opn@^5.3.0:
   dependencies:
     is-wsl "^1.1.0"
 
-option-t@^23.0.0:
-  version "23.0.0"
-  resolved "https://registry.yarnpkg.com/option-t/-/option-t-23.0.0.tgz#c8dd593d3e1fce39c43653485d5e98bdfd7019f7"
-  integrity sha512-r1XDP3wRztuhNwUKQikTQf4DOfBBWrH2CQWZ38206118ArqdtTFGBPTe6/zdOU4Cs4QufIkKCrL52GPTxg+Ayg==
+option-t@^25.0.0:
+  version "25.4.0"
+  resolved "https://registry.yarnpkg.com/option-t/-/option-t-25.4.0.tgz#9197ee0db6672b9e41982cf0989b779726c17bd0"
+  integrity sha512-JXVWeQwiji0nRdHpRSrnrSlVPz0PQ0d6nv3btAntNduTmbdFzEoXqgjNjLzuh0eR6+JYs4pFrsCPAojWl9GBPQ==
 
 optionator@^0.9.1:
   version "0.9.1"

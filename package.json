@@ -33,7 +33,7 @@
     "eslint-config-prettier": "6.15.0",
     "eslint-plugin-prettier": "3.4.0",
     "node-fetch": "2.6.1",
-    "prettier": "2.2.1",
+    "prettier": "2.3.0",
     "rename-cli": "6.2.1",
     "replace": "1.1.5",
     "rollup": "1.32.1",

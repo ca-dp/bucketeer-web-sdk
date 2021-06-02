@@ -73,7 +73,7 @@ async function execute() {
    *          Specify in milliseconds.
    */
   const bucketeer = initialize({
-    host: 'https://api-uat.bucketeer.jp:443',
+    host: '<API_ENDPOINT>', // e.g. api-media.bucketeer.jp:443
     token: '<TOKEN>',
     tag: 'web',
     user: {

@@ -18,10 +18,7 @@ function createFixture(): PlainResponse {
           userId: 'userId',
           user: { id: 'id', data: {} },
           variationId: 'variationId',
-          variation: {
-            id: 'id',
-            value: 'value',
-          },
+          variationValue: 'value',
           reason: {
             type: ReasonType.DEFAULT,
           },

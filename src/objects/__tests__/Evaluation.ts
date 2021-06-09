@@ -10,10 +10,7 @@ test('Evaluation: convertRawToEvaluation is ok', (t) => {
     userId: 'userId',
     user: { id: 'id', data: {} },
     variationId: 'variationId',
-    variation: {
-      id: 'id',
-      value: 'value',
-    },
+    variationValue: 'value',
   };
   const res = convertRawToEvaluation(obj);
   t.true(res.ok);

@@ -209,10 +209,7 @@ export function initialize(config: Config): Bucketeer {
             featureVersion: 0,
             userId: user.id,
             variationId: '',
-            variation: {
-              id: '',
-              value: defaultValue,
-            },
+            variationValue: defaultValue,
             reason: {
               type: ReasonType.CLIENT,
             },
@@ -231,7 +228,7 @@ export function initialize(config: Config): Bucketeer {
       });
       eventStore.add(evaluationEvent);
       registerEvents();
-      return evaluation.variation.value;
+      return evaluation.variationValue;
     },
     track(goalId: string, value?: number): void {
       const timestamp = createTimestamp();
@@ -292,7 +289,7 @@ export function initialize(config: Config): Bucketeer {
             featureVersion: evaluation.featureVersion,
             userId: evaluation.userId,
             variationId: evaluation.variationId,
-            variationValue: evaluation.variation.value,
+            variationValue: evaluation.variationValue,
             reason: Reason.convTypeToNumber(evaluation.reason.type),
           }
         : null;

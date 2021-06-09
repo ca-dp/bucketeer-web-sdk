@@ -6,14 +6,12 @@ import { EvaluationStore } from '../EvaluationStore';
 
 function createEvaluation(): Evaluation {
   return new Evaluation({
+    id: 'id',
     featureId: 'featureId',
     featureVersion: 0,
     userId: 'userId',
     variationId: 'variationId',
-    variation: {
-      id: 'id',
-      value: 'value',
-    },
+    variationValue: 'value',
     reason: {
       type: ReasonType.DEFAULT,
     },

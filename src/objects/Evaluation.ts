@@ -1,6 +1,5 @@
 import { isNotNullAndUndefined } from 'option-t/lib/Maybe/Maybe';
 import { createOk, createErr, Result } from 'option-t/lib/PlainResult/Result';
-import { existsRequiredVariationProps, Variation, VariationAsPlainObject } from './Variation';
 import { Reason, ReasonAsPlainObject } from './Reason';
 
 const requiredProps: Array<keyof EvaluationAsPlainObject> = [
@@ -9,7 +8,7 @@ const requiredProps: Array<keyof EvaluationAsPlainObject> = [
   'featureVersion',
   'userId',
   'variationId',
-  'variation',
+  'variationValue',
 ];
 
 // tslint:disable-next-line no-any
@@ -19,7 +18,7 @@ export function existsRequiredEvaluationProps(obj: any): boolean {
 
 // tslint:disable-next-line no-any
 export function convertRawToEvaluation(obj: any): Result<Evaluation, Error> {
-  const ok = existsRequiredEvaluationProps(obj) && existsRequiredVariationProps(obj.variation);
+  const ok = existsRequiredEvaluationProps(obj);
   return ok ? createOk(new Evaluation(obj)) : createErr(new Error('requiredProps not exist'));
 }
 
@@ -29,7 +28,7 @@ export type EvaluationAsPlainObject = {
   featureVersion: number;
   userId: string;
   variationId: string;
-  variation: VariationAsPlainObject;
+  variationValue: string;
   reason: ReasonAsPlainObject;
 };
 
@@ -54,8 +53,8 @@ export class Evaluation {
     return this._plainObj.variationId;
   }
 
-  get variation(): Variation {
-    return new Variation(this._plainObj.variation);
+  get variationValue(): string {
+    return this._plainObj.variationValue;
   }
 
   get reason(): Reason {

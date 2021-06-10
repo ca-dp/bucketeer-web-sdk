@@ -11,14 +11,12 @@ test('getStringVariation: when a value exists', (t) => {
   const storage = unwrapNullable(createStorage());
   storage.setLatestEvaluations([
     new Evaluation({
+      id: 'id',
       featureId: FEATURE_ID,
       featureVersion: 0,
       userId: 'user',
       variationId: '',
-      variation: {
-        id: '',
-        value: EXPECTED_VALUE,
-      },
+      variationValue: EXPECTED_VALUE,
       reason: {
         type: ReasonType.CLIENT,
       },

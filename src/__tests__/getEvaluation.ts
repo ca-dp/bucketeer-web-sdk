@@ -23,10 +23,7 @@ test('getEvaluation: evaluation exists', (t) => {
       featureVersion: 1,
       userId: 'uid',
       variationId: 'vid',
-      variation: {
-        id: 'vid',
-        value: 'val',
-      },
+      variationValue: 'val',
       reason: {
         type: ReasonType.CLIENT,
       },
@@ -48,10 +45,7 @@ test('getEvaluation: evaluation does not exists', (t) => {
       featureVersion: 1,
       userId: 'uid',
       variationId: 'vid',
-      variation: {
-        id: 'vid',
-        value: 'val',
-      },
+      variationValue: 'val',
       reason: {
         type: ReasonType.CLIENT,
       },

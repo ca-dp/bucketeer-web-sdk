@@ -33,6 +33,10 @@ export class EvaluationEvent {
     return this._plainObj.variationId;
   }
 
+  get reason(): Reason {
+    return new Reason(this._plainObj.reason);
+  }
+
   get timestamp(): number {
     return this._plainObj.timestamp;
   }

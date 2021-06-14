@@ -198,36 +198,43 @@ export function initialize(config: Config): Bucketeer {
     }
   }, pollingIntervalForRegisterEvents);
 
+  function saveDefaultEvaluationEvent(featureId: string) {
+    const evaluationEvent = new EvaluationEvent({
+      featureId: featureId,
+      featureVersion: 0,
+      userId: user.id,
+      user: user.toPlainObject(),
+      variationId: '',
+      reason: { type: ReasonType.CLIENT },
+      timestamp: createTimestamp(),
+    });
+    eventStore.add(evaluationEvent);
+    registerEvents();
+  }
+
+  function saveEvaluationEvent(evaluation: Evaluation) {
+    const evaluationEvent = new EvaluationEvent({
+      featureId: evaluation.featureId,
+      featureVersion: evaluation.featureVersion,
+      userId: user.id,
+      user: user.toPlainObject(),
+      variationId: evaluation.variationId,
+      reason: { type: ReasonType.DEFAULT },
+      timestamp: createTimestamp(),
+    });
+    eventStore.add(evaluationEvent);
+    registerEvents();
+  }
+
   return {
     getStringVariation(featureId: string, defaultValue: string): string {
-      const evaluation = unwrapOrElseFromNullable(
-        latestEvaluationStore.get(featureId),
-        () =>
-          new Evaluation({
-            id: '',
-            featureId,
-            featureVersion: 0,
-            userId: user.id,
-            variationId: '',
-            variationValue: defaultValue,
-            reason: {
-              type: ReasonType.CLIENT,
-            },
-          }),
-      );
+      const evaluation = latestEvaluationStore.get(featureId);
+      if (evaluation == null) {
+        saveDefaultEvaluationEvent(featureId);
+        return defaultValue;
+      }
       currentEvaluationStore.set(evaluation);
-      const timestamp = createTimestamp();
-      const evaluationEvent = new EvaluationEvent({
-        featureId: evaluation.featureId,
-        featureVersion: evaluation.featureVersion,
-        userId: user.id,
-        user,
-        variationId: evaluation.variationId,
-        reason: { type: ReasonType.CLIENT },
-        timestamp,
-      });
-      eventStore.add(evaluationEvent);
-      registerEvents();
+      saveEvaluationEvent(evaluation);
       return evaluation.variationValue;
     },
     track(goalId: string, value?: number): void {

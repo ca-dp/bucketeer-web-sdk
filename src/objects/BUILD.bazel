@@ -24,6 +24,7 @@ ts_library(
     deps = [
         ":Reason",
         ":User",
+        "//src:shared",
         "@npm//@types/node",
         "@npm//option-t",
     ],
@@ -37,6 +38,7 @@ ts_library(
     tsconfig = "//:tsconfig.json",
     deps = [
         ":Evaluation",
+        "//src:shared",
         "@npm//@types/node",
         "@npm//option-t",
     ],

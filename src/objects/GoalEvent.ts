@@ -1,6 +1,9 @@
 import { Evaluation, EvaluationAsPlainObject } from './Evaluation';
+import { SourceId } from '../shared';
 
 export type GoalEventAsPlainObject = {
+  sourceId: SourceId;
+  tag: string;
   goalId: string;
   userId: string;
   value: number;
@@ -10,6 +13,14 @@ export type GoalEventAsPlainObject = {
 };
 
 export class GoalEvent {
+  get sourceId(): SourceId {
+    return this._plainObj.sourceId;
+  }
+
+  get tag(): string {
+    return this._plainObj.tag;
+  }
+
   get goalId(): string {
     return this._plainObj.goalId;
   }

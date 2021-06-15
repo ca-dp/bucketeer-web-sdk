@@ -2,7 +2,6 @@ import { tapMaybe } from 'option-t/lib/Maybe/tap';
 import { Nullable } from 'option-t/lib/Nullable/Nullable';
 import { tapNullable } from 'option-t/lib/Nullable/tap';
 import { mapOrForNullable } from 'option-t/lib/Nullable/mapOr';
-import { unwrapOrElseFromNullable } from 'option-t/lib/Nullable/unwrapOrElse';
 import { unwrapOrFromUndefinable } from 'option-t/lib/Undefinable/unwrapOr';
 import { isErr } from 'option-t/lib/PlainResult/Result';
 import { createGetEvaluationsAPI, GetEvaluationsState } from './api/getEvaluations';
@@ -28,6 +27,7 @@ import { EvaluationStore } from './stores/EvaluationStore';
 import { EventStore } from './stores/EventStore';
 import { createSchedule, removeSchedule } from './schedule';
 import { Host, Token, Tag, GIT_REVISION } from './shared';
+import { SourceId } from './shared';
 
 export interface Config {
   host: Host;
@@ -200,6 +200,8 @@ export function initialize(config: Config): Bucketeer {
 
   function saveDefaultEvaluationEvent(featureId: string) {
     const evaluationEvent = new EvaluationEvent({
+      sourceId: SourceId.WEB,
+      tag: tag,
       featureId: featureId,
       featureVersion: 0,
       userId: user.id,
@@ -214,6 +216,8 @@ export function initialize(config: Config): Bucketeer {
 
   function saveEvaluationEvent(evaluation: Evaluation) {
     const evaluationEvent = new EvaluationEvent({
+      sourceId: SourceId.WEB,
+      tag: tag,
       featureId: evaluation.featureId,
       featureVersion: evaluation.featureVersion,
       userId: user.id,
@@ -240,6 +244,8 @@ export function initialize(config: Config): Bucketeer {
     track(goalId: string, value?: number): void {
       const timestamp = createTimestamp();
       const goalEvent = new GoalEvent({
+        sourceId: SourceId.WEB,
+        tag: tag,
         goalId,
         userId: user.id,
         value: unwrapOrFromUndefinable(value, 0),

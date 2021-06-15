@@ -6,6 +6,7 @@ import { GoalEvent } from '../objects/GoalEvent';
 import { createBucketeer } from './_helper';
 import { ReasonType } from '../objects/Reason';
 import { MetricsEvent } from '../objects/MetricsEvent';
+import { SourceId } from '../shared';
 
 function isEvaluationEvent(
   event: EvaluationEvent | GoalEvent | MetricsEvent,
@@ -26,6 +27,8 @@ test('getStringVariation: default evaluation', (t) => {
   const events = storage.getEvents();
   const event = isEvaluationEvent(events[0]) ? events[0] : null;
   t.is(variationValue, EXPECTED_VARIATION_VALUE);
+  t.is(event.sourceId, SourceId.WEB);
+  t.is(event.tag, 'web');
   t.is(event.featureId, EXPECTED_FEATURE_ID);
   t.is(event.featureVersion, 0);
   t.is(event.userId, bucketeer.getUser().id);

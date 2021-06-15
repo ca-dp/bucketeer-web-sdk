@@ -1,8 +1,5 @@
 export type Host = string;
 export type Token = string;
-export enum SourceId {
-  WEB = 'WEB',
-}
 export type Tag = string;
 export type UserEvaluationsId = string;
 

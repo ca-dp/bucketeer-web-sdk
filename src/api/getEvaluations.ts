@@ -5,7 +5,8 @@ import { unwrapOrFromMaybe } from 'option-t/lib/Maybe/unwrapOr';
 import { mapOrForMaybe } from 'option-t/lib/Maybe/mapOr';
 import { convertRawToEvaluation, Evaluation, EvaluationAsPlainObject } from '../objects/Evaluation';
 import { User, UserAsPlainObject } from '../objects/User';
-import { Host, Token, SourceId, Tag, UserEvaluationsId } from '../shared';
+import { Host, Token, Tag, UserEvaluationsId } from '../shared';
+import { SourceId } from '../objects/SourceId';
 import { PostFn, post } from '../api/shared';
 
 export enum GetEvaluationsState {

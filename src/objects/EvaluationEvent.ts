@@ -1,6 +1,6 @@
 import { Reason, ReasonAsPlainObject } from './Reason';
 import { User, UserAsPlainObject } from './User';
-import { SourceId } from '../shared';
+import { SourceId } from './SourceId';
 
 export type EvaluationEventAsPlainObject = {
   sourceId: SourceId;

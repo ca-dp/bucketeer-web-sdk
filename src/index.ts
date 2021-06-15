@@ -27,7 +27,7 @@ import { EvaluationStore } from './stores/EvaluationStore';
 import { EventStore } from './stores/EventStore';
 import { createSchedule, removeSchedule } from './schedule';
 import { Host, Token, Tag, GIT_REVISION } from './shared';
-import { SourceId } from './shared';
+import { SourceId } from './objects/SourceId';
 
 export interface Config {
   host: Host;

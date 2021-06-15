@@ -1,5 +1,5 @@
 import { Evaluation, EvaluationAsPlainObject } from './Evaluation';
-import { SourceId } from '../shared';
+import { SourceId } from './SourceId';
 
 export type GoalEventAsPlainObject = {
   sourceId: SourceId;

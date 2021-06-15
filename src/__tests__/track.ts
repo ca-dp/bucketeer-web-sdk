@@ -2,7 +2,7 @@ import test from 'ava';
 import { unwrapNullable } from 'option-t/lib/Nullable/unwrap';
 import { createStorage } from '../storage/storage';
 import { EvaluationEvent } from '../objects/EvaluationEvent';
-import { SourceId } from '../shared';
+import { SourceId } from '../objects/SourceId';
 import { GoalEvent } from '../objects/GoalEvent';
 import { createBucketeer } from './_helper';
 import { MetricsEvent } from '../objects/MetricsEvent';

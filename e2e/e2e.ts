@@ -6,7 +6,7 @@ import { ReasonType } from '../lib/objects/Reason';
 import { Evaluation } from '../lib/objects/Evaluation';
 import { EvaluationEvent } from '../lib/objects/EvaluationEvent';
 import { GoalEvent } from '../lib/objects/GoalEvent';
-import { SourceId } from '../lib/shared';
+import { SourceId } from '../lib/objects/SourceId';
 import { GetEvaluationsState, createGetEvaluationsAPI } from '../lib/api/getEvaluations';
 import { createRegisterEventsAPI } from '../lib/api/registerEvents';
 import { Bucketeer, initialize } from '../lib/index';

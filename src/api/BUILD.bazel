@@ -23,6 +23,7 @@ ts_library(
     deps = [
         ":shared",
         "//src:shared",
+        "//src/objects:SourceId",
         "//src/objects:Evaluation",
         "//src/objects:User",
         "@npm//@types/node",
@@ -39,6 +40,7 @@ ts_library(
     deps = [
         ":shared",
         "//src:shared",
+        "//src/objects:SourceId",
         "//src/objects:EvaluationEvent",
         "//src/objects:GoalEvent",
         "//src/objects:MetricsEvent",

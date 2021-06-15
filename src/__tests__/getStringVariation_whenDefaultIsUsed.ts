@@ -6,7 +6,7 @@ import { GoalEvent } from '../objects/GoalEvent';
 import { createBucketeer } from './_helper';
 import { ReasonType } from '../objects/Reason';
 import { MetricsEvent } from '../objects/MetricsEvent';
-import { SourceId } from '../shared';
+import { SourceId } from '../objects/SourceId';
 
 function isEvaluationEvent(
   event: EvaluationEvent | GoalEvent | MetricsEvent,

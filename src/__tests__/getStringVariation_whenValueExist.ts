@@ -7,6 +7,7 @@ import { createBucketeer } from './_helper';
 import { EvaluationEvent } from '../objects/EvaluationEvent';
 import { GoalEvent } from '../objects/GoalEvent';
 import { MetricsEvent } from '../objects/MetricsEvent';
+import { SourceId } from '../objects/SourceId';
 
 function isEvaluationEvent(
   event: EvaluationEvent | GoalEvent | MetricsEvent,
@@ -45,6 +46,8 @@ test('getStringVariation: when a value exists', (t) => {
   const event = isEvaluationEvent(events[0]) ? events[0] : null;
   t.is(variationValue, EXPECTED_VARIATION_VALUE);
   t.is(events.length, 1);
+  t.is(event.sourceId, SourceId.WEB);
+  t.is(event.tag, 'web');
   t.is(event.featureId, EXPECTED_FEATURE_ID);
   t.is(event.featureVersion, EXPECTED_FEATURE_VERSION);
   t.is(event.userId, EXPECTED_USER_ID);

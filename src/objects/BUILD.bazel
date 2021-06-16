@@ -24,6 +24,7 @@ ts_library(
     deps = [
         ":Reason",
         ":User",
+        ":SourceId",
         "@npm//@types/node",
         "@npm//option-t",
     ],
@@ -37,6 +38,7 @@ ts_library(
     tsconfig = "//:tsconfig.json",
     deps = [
         ":Evaluation",
+        ":SourceId",
         "@npm//@types/node",
         "@npm//option-t",
     ],
@@ -104,6 +106,17 @@ ts_library(
     name = "User",
     srcs = [
         "User.ts",
+    ],
+    tsconfig = "//:tsconfig.json",
+    deps = [
+        "@npm//@types/node",
+    ],
+)
+
+ts_library(
+    name = "SourceId",
+    srcs = [
+        "SourceId.ts",
     ],
     tsconfig = "//:tsconfig.json",
     deps = [

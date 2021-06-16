@@ -28,6 +28,7 @@ ts_library(
         "//src/objects:MetricsEvent",
         "//src/objects:Reason",
         "//src/objects:User",
+        "//src/objects:SourceId",
         "//src/storage",
         "//src/stores:EvaluationStore",
         "//src/stores:EventStore",

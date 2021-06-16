@@ -6,6 +6,7 @@ import { mapOrForMaybe } from 'option-t/lib/Maybe/mapOr';
 import { convertRawToEvaluation, Evaluation, EvaluationAsPlainObject } from '../objects/Evaluation';
 import { User, UserAsPlainObject } from '../objects/User';
 import { Host, Token, Tag, UserEvaluationsId } from '../shared';
+import { SourceId } from '../objects/SourceId';
 import { PostFn, post } from '../api/shared';
 
 export enum GetEvaluationsState {
@@ -30,6 +31,7 @@ export type GetEvaluationsResponse = {
 };
 
 export type GetEvaluationsRequest = {
+  sourceId: SourceId;
   tag: Tag;
   user: UserAsPlainObject;
   userEvaluationsId: UserEvaluationsId;
@@ -54,6 +56,7 @@ export const createGetEvaluationsAPI = (
     userEvaluationsId: UserEvaluationsId,
   ): Promise<GetEvaluationsResult> {
     return api(`${host}/get_evaluations`, token, {
+      sourceId: SourceId.WEB,
       tag,
       user: user.toPlainObject(),
       userEvaluationsId,

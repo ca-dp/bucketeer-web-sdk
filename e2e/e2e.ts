@@ -6,6 +6,7 @@ import { ReasonType } from '../lib/objects/Reason';
 import { Evaluation } from '../lib/objects/Evaluation';
 import { EvaluationEvent } from '../lib/objects/EvaluationEvent';
 import { GoalEvent } from '../lib/objects/GoalEvent';
+import { SourceId } from '../lib/objects/SourceId';
 import { GetEvaluationsState, createGetEvaluationsAPI } from '../lib/api/getEvaluations';
 import { createRegisterEventsAPI } from '../lib/api/registerEvents';
 import { Bucketeer, initialize } from '../lib/index';
@@ -83,6 +84,8 @@ test('registerEvents', async (t) => {
   });
   const events = [
     new EvaluationEvent({
+      sourceId: SourceId.WEB,
+      tag: TAG,
       featureId: FEATURE_FLAG_ID_1,
       featureVersion: FEATURE_FLAG_VERSION_1,
       userId: USER_ID_1,
@@ -97,6 +100,8 @@ test('registerEvents', async (t) => {
       timestamp: createTimestamp(),
     }),
     new GoalEvent({
+      sourceId: SourceId.WEB,
+      tag: TAG,
       goalId: GOAL_ID_1,
       userId: USER_ID_1,
       value: 0,

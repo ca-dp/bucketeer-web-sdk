@@ -1,7 +1,10 @@
 import { Reason, ReasonAsPlainObject } from './Reason';
 import { User, UserAsPlainObject } from './User';
+import { SourceId } from './SourceId';
 
 export type EvaluationEventAsPlainObject = {
+  sourceId: SourceId;
+  tag: string;
   featureId: string;
   featureVersion: number;
   userId: string;
@@ -13,6 +16,14 @@ export type EvaluationEventAsPlainObject = {
 };
 
 export class EvaluationEvent {
+  get sourceId(): SourceId {
+    return this._plainObj.sourceId;
+  }
+
+  get tag(): string {
+    return this._plainObj.tag;
+  }
+
   get featureId(): string {
     return this._plainObj.featureId;
   }

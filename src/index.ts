@@ -223,7 +223,7 @@ export function initialize(config: Config): Bucketeer {
       userId: user.id,
       user: user.toPlainObject(),
       variationId: evaluation.variationId,
-      reason: { type: ReasonType.DEFAULT },
+      reason: evaluation.reason.toPlainObject(),
       timestamp: createTimestamp(),
     });
     eventStore.add(evaluationEvent);

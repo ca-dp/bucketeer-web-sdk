@@ -15,7 +15,7 @@
   },
   "devDependencies": {
     "@bazel/hide-bazel-files": "1.7.0",
-    "@bazel/rollup": "1.7.0",
+    "@bazel/rollup": "5.0.2",
     "@bazel/terser": "1.7.0",
     "@bazel/typescript": "1.7.0",
     "@ava/babel": "1.0.1",

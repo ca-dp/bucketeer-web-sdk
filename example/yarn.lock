@@ -2,12 +2,12 @@
 # yarn lockfile v1
 
 
-"@bucketeer/sdk@1.26.8":
-  version "1.26.8"
-  resolved "https://registry.yarnpkg.com/@bucketeer/sdk/-/sdk-1.26.8.tgz#51204e4223d6aeacd865def535abe9afe5f8c29b"
-  integrity sha512-WfKgcWzsIJJaTEHS6QrFFkBG67MiLTqMelAY387dT2UT+A2YAY063YSmNEX74oLuUPbUOKys11ReQdUAFga03Q==
+"@bucketeer/sdk@1.34.0":
+  version "1.34.0"
+  resolved "https://registry.yarnpkg.com/@bucketeer/sdk/-/sdk-1.34.0.tgz#6b4c2e24a6157d34085f838725cb592efd33d328"
+  integrity sha512-AV1IWGRIOKNCIAD0wv+mC16HE444MyJ9mv4I0qVXAb+vMRKHAK8p2QfVd1zbZYFUddDRyWeUlodGloM72PsSlg==
   dependencies:
-    option-t "^28.0.0"
+    option-t "^30.0.0"
     uuid "^8.1.0"
 
 "@types/body-parser@*":
@@ -261,9 +261,9 @@ ajv@^6.1.0, ajv@^6.10.2:
     uri-js "^4.2.2"
 
 ansi-regex@^4.1.0:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/ansi-regex/-/ansi-regex-4.1.0.tgz#8b9f8f08cf1acb843756a839ca8c7e3168c51997"
-  integrity sha512-1apePfXM1UOSqw0o9IiFAovVz9M5S1Dg+4TrDwfMewQ6p/rmMueb7tWZjQ1rx4Loy1ArBggoqGpfqqdI4rondg==
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/ansi-regex/-/ansi-regex-4.1.1.tgz#164daac87ab2d6f6db3a29875e2d1766582dabed"
+  integrity sha512-ILlv4k/3f6vfQ4OoP2AGvirOktlQ98ZEL1k9FaQjxa3L1abBgbuTDAdPOpvbGncC0BTVQrl+OM8xZGK6tWXt7g==
 
 ansi-styles@^3.2.0, ansi-styles@^3.2.1:
   version "3.2.1"
@@ -1932,9 +1932,9 @@ minimatch@^3.0.4:
     brace-expansion "^1.1.7"
 
 minimist@^1.2.0, minimist@^1.2.5:
-  version "1.2.5"
-  resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.5.tgz#67d66014b66a6a8aaa0c083c5fd58df4e4e97602"
-  integrity sha512-FM9nNUYrRBAELZQT3xeZQ7fmMOBg6nWNmJKTcgsJeaLstP/UODVpGsr5OhXhhXg6f+qtJ8uiZ+PUxkDWcgIXLw==
+  version "1.2.6"
+  resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.6.tgz#8637a5b759ea0d6e98702cfb3a9283323c93af44"
+  integrity sha512-Jsjnk4bw3YJqYzbdyBiNsPWHPfO++UGG749Cxs6peCu5Xg4nrena6OVxOYxrQTqww0Jmwt+Ref8rggumkTLz9Q==
 
 mississippi@^3.0.0:
   version "3.0.0"
@@ -2121,10 +2121,10 @@ option-t@30.0.0:
   resolved "https://registry.yarnpkg.com/option-t/-/option-t-30.0.0.tgz#962f62d59b29731445671d8afea7c0626e7857d0"
   integrity sha512-y2c7dc0m+8fwnEoeUbOI6SMm5AA9OEG6Aa63lIH8wh5ifjXtx2jYI+kHVQvajqCZXWcg+T7zDE3y8fEjFfG1SQ==
 
-option-t@^28.0.0:
-  version "28.1.0"
-  resolved "https://registry.yarnpkg.com/option-t/-/option-t-28.1.0.tgz#ade5ad680c237ab9289c9fa8abfe122006dc7fed"
-  integrity sha512-JeGfidd2zDmCGjY8BCtAlqQfVhtZw5uNx36MwZtbEsR9N6CgqKUK+cb8cEHVbYQAGLvERHmgYi0SdFDuxIHkRg==
+option-t@^30.0.0:
+  version "30.1.0"
+  resolved "https://registry.yarnpkg.com/option-t/-/option-t-30.1.0.tgz#ef639c1c086526517fa7bb6e07841a31d6f3999e"
+  integrity sha512-lMXy/LttBmiyGUOyqdttuadyVZ9ZgMHgtmwYAhUvhWGTGvSdUoU+FeswUL2uf7mM0xp+cVRHmYTjjfwAtSALhA==
 
 os-browserify@^0.3.0:
   version "0.3.0"

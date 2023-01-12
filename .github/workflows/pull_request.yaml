@@ -122,10 +122,12 @@ jobs:
           key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
             ${{ runner.os }}-yarn-
+      - name: Build
+        run: make build
       - name: Run e2e test
         run: |
           sed -i \
-            -e "s|<HOST>|${{ secrets.API_HOST }}|" \
-            -e "s|<TOKEN>|${{ secrets.API_TOKEN }}|" \
+            -e "s|<HOST>|${{ secrets.E2E_API_HOST }}|" \
+            -e "s|<TOKEN>|${{ secrets.E2E_API_TOKEN }}|" \
             ava-e2e.config.js
           make e2e

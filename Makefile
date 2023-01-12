@@ -18,9 +18,9 @@ export PACKAGE_NAME := $(shell node -p "require('./package.json').name")
 export CURRENT_VERSION := $(shell npm view $(PACKAGE_NAME) version 2>/dev/null || echo 0.0.0)
 export LOCAL_VERSION := $(shell node -p "require('./package.json').version")
 
-.PHONY: init
-init: ## Install dependencies
-	yarn
+.PHONY: deps
+deps: ## Install dependencies
+	yarn install
 
 .PHONY: clean
 clean:

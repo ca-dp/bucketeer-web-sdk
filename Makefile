@@ -18,9 +18,9 @@ export PACKAGE_NAME := $(shell node -p "require('./package.json').name")
 export CURRENT_VERSION := $(shell npm view $(PACKAGE_NAME) version 2>/dev/null || echo 0.0.0)
 export LOCAL_VERSION := $(shell node -p "require('./package.json').version")
 
-.PHONY: init
-init: ## Install dependencies
-	yarn
+.PHONY: deps
+deps: ## Install dependencies
+	yarn install
 
 .PHONY: clean
 clean:
@@ -70,8 +70,4 @@ publish_dry: copy_genfiles
 
 .PHONY: publish
 publish: copy_genfiles
-ifeq ($(shell $(NPM_BIN_DIR)/semver -r ">$(CURRENT_VERSION)" $(LOCAL_VERSION) ),$(LOCAL_VERSION))
-	npm publish --unsafe-perm
-else
-	@echo "$(LOCAL_VERSION) exists. skip publish."
-endif
+	npm publish --access public

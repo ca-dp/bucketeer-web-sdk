@@ -103,6 +103,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - uses: bazelbuild/setup-bazelisk@95c9bf48d0c570bb3e28e57108f3450cd67c1a44 # v2.0.0
+      - name: Mount bazel cache
+        uses: actions/cache@v3
+        with:
+          path: "~/.cache/bazel"
+          key: bazel
       - name: Set yarn cache directory path
         id: yarn-cache-dir-path
         run: echo "::set-output name=dir::$(yarn cache dir)"

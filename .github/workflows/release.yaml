@@ -1,0 +1,27 @@
+name: release
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - master
+
+jobs:
+  release_please:
+    name: Release Please
+    runs-on: ubuntu-latest
+    steps:
+      - uses: google-github-actions/release-please-action@5c07f8be172b1f6e90f9c35baf8184461b91b85f # v3.7.1
+        with:
+          changelog-types: |
+            [
+              {"type":"build","section":"Build System","hidden":false},
+              {"type":"chore","section":"Miscellaneous","hidden":false},
+              {"type":"feat","section":"Features","hidden":false},
+              {"type":"fix","section":"Bug Fixes","hidden":false},
+              {"type":"perf","section":"Performance Improvements","hidden":false},
+              {"type":"revert","section":"Reverts","hidden":false}
+            ]
+          release-type: node
+          package-name: "@bucketeer/sdk"
+          bump-minor-pre-major: true

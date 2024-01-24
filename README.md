@@ -1,3 +1,10 @@
+# DEPRECATED
+This repository is no longer maintained. Please update to version V2 following the instructions in the repository below.
+
+https://github.com/bucketeer-io/javascript-client-sdk
+
+<br><br>
+
 # Bucketeer Client-side SDK for Web
 
 ## Setup
